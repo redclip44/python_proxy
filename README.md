@@ -58,7 +58,6 @@ usage: ./proxy.py reverseproxy [-h] [--listen-port LISTEN_PORT]
                                [--listen-ca-cert LISTEN_CA_CERT]
                                [--listen-cert LISTEN_CERT]
                                [--listen-key LISTEN_KEY]
-                               [--proxy-ssl PROXY_SSL]
                                [--proxy-module PROXY_MODULE]
 
 optional arguments:
@@ -77,8 +76,6 @@ optional arguments:
                         PEM-Cert for listening
   --listen-key LISTEN_KEY
                         PEM-Key for listening
-  --proxy-ssl PROXY_SSL
-                        Reverse proxy endpoints use SSL?
   --proxy-module PROXY_MODULE
                         Import .py file as a module containing a class named
                         ProxyHandler to handle reverse proxy functionality

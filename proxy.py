@@ -65,12 +65,12 @@ class StaticProxy(object):
 					print "second end connection successful with " + str(self.proxy_to)
 					in_sock = forward_sock
 					out_sock = clientsock
-					self.handle_client(fr=forward_sock, to=clientsock, prnt=int(os.getenv("LOG_SCANNER_OUTPUT", 0)))
+					self.handle_client(fr=forward_sock, to=clientsock, prnt=int(os.getenv("LOG_PROXY_OUTPUT", 0)))
 				else:
 					print "first end connection successful with client " + str(addr)
 					in_sock = clientsock
 					out_sock = forward_sock
-					self.handle_client(fr=clientsock, to=forward_sock, prnt=int(os.getenv("LOG_SCANNER_INPUT", 0)))
+					self.handle_client(fr=clientsock, to=forward_sock, prnt=int(os.getenv("LOG_PROXY_INPUT", 0)))
 			else:
 				os.waitpid(-1, os.WNOHANG) 
 		else:
@@ -213,12 +213,12 @@ class ReverseProxy(object):
 					print "second end connection successful with " + str(self.proxy_to)
 					in_sock = forward_sock
 					out_sock = clientsock
-					self.handle_client(fr=forward_sock, to=clientsock, prnt=int(os.getenv("LOG_SCANNER_OUTPUT", 0)))
+					self.handle_client(fr=forward_sock, to=clientsock, prnt=int(os.getenv("LOG_PROXY_OUTPUT", 0)))
 				else:
 					print "first end connection successful with client " + str(addr)
 					in_sock = clientsock
 					out_sock = forward_sock
-					self.handle_client(fr=clientsock, to=forward_sock, prnt=int(os.getenv("LOG_SCANNER_INPUT", 0)))
+					self.handle_client(fr=clientsock, to=forward_sock, prnt=int(os.getenv("LOG_PROXY_INPUT", 0)))
 			else:
 				os.waitpid(-1, os.WNOHANG) 
 		else:
