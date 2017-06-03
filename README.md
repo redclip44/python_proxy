@@ -71,7 +71,7 @@ optional arguments:
 
  * Create a file with .py extension (xxx.py) containing a class named ProxyHandler.
  * Proxy handler must implement these methods:
-   ```
+```
 class ProxyHandler(object):
     ### Initialize first end forward
     initial_handshake(self, socket)
@@ -92,6 +92,6 @@ class ProxyHandler(object):
     modify_data(data)
         @data: data to forward
         @return: string -> (modified data)
-   ```
+```
 
  * Call ```./proxy.py reverseproxy --proxy-module=xxx.py --...```
