@@ -3,11 +3,12 @@
 ## Table of Contents
 
    * [Python Static and Reverse Proxy](#python-static-and-reverse-proxy)
-      * [Usage:](#usage)
+      * [Usage](#usage)
       * [Configure Reverse Proxy](#configure-reverse-proxy)
-      * [Preconditions:](#preconditions)
+      * [Preconditions](#preconditions)
+      * [Example](#example)
 
-## Usage:
+## Usage
  * For static proxy
   ```
 usage: ./proxy.py staticproxy [-h] [--listen-port LISTEN_PORT]
@@ -105,7 +106,11 @@ class ProxyHandler(object):
 
  * Call ```./proxy.py reverseproxy --proxy-module=xxx.py --...```
 
-## Preconditions:
+## Preconditions
 
  * Python 2.7
  * PyOpenSSL
+
+## Example
+
+ * TCP-Proxy Docker-Socket: ```./proxy staticproxy --listen-host=0.0.0.0 --listen-port=4000 --proxy-unix=/var/run/docker.sock```
