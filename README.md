@@ -95,3 +95,8 @@ class ProxyHandler(object):
 ```
 
  * Call ```./proxy.py reverseproxy --proxy-module=xxx.py --...```
+
+## Preconditions:
+
+ * Python 2.7
+ * PyOpenSSL
