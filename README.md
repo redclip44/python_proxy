@@ -1,0 +1,68 @@
+# Python Static and Reverse Proxy
+
+## Usage:
+ * For static proxy
+  ```
+usage: ./proxy.py staticproxy [-h] [--listen-port LISTEN_PORT]
+                              [--listen-host LISTEN_HOST]
+                              [--listen-unix LISTEN_UNIX]
+                              [--listen-ssl LISTEN_SSL]
+                              [--listen-ca-cert LISTEN_CA_CERT]
+                              [--listen-cert LISTEN_CERT]
+                              [--listen-key LISTEN_KEY]
+                              [--proxy-port PROXY_PORT]
+                              [--proxy-host PROXY_HOST]
+                              [--proxy-unix PROXY_UNIX]
+                              [--proxy-ssl PROXY_SSL]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --listen-port LISTEN_PORT
+                        Listen port for proxy only with --listen-host
+  --listen-host LISTEN_HOST
+                        Listen host for proxy only with --listen-port
+  --listen-unix LISTEN_UNIX
+                        Listen unix socket for proxy
+  --listen-ssl LISTEN_SSL
+                        Listen with SSL
+  --listen-ca-cert LISTEN_CA_CERT
+                        PEM-CA-Cert for listening
+  --listen-cert LISTEN_CERT
+                        PEM-Cert for listening
+  --listen-key LISTEN_KEY
+                        PEM-Key for listening
+  --proxy-port PROXY_PORT
+                        Port of the TCP proxy endpoint, only with --proxy-host
+  --proxy-host PROXY_HOST
+                        Host of the proxy endpoint, only with --proxy-port
+  --proxy-unix PROXY_UNIX
+                        Unix socket of the proxy endpoint
+  --proxy-ssl PROXY_SSL
+                        Proxy endpoint uses SSL?
+  ```
+* For reverse proxy:
+  ```
+
+usage: ./proxy.py reverseproxy [-h] [--listen-port LISTEN_PORT]
+                               [--listen-host LISTEN_HOST]
+                               [--listen-unix LISTEN_UNIX]
+                               [--listen-ssl LISTEN_SSL]
+                               [--proxy-ssl PROXY_SSL]
+                               [--proxy-module PROXY_MODULE]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --listen-port LISTEN_PORT
+                        Listen port for proxy only with --listen-host
+  --listen-host LISTEN_HOST
+                        Listen host for proxy only with --listen-port
+  --listen-unix LISTEN_UNIX
+                        Listen unix socket for proxy
+  --listen-ssl LISTEN_SSL
+                        Listen with SSL
+  --proxy-ssl PROXY_SSL
+                        Reverse proxy endpoints use SSL?
+  --proxy-module PROXY_MODULE
+                        Import .py file as a module containing a class named
+                        ProxyHandler to handle reverse proxy functionality
+  ```
