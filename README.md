@@ -55,6 +55,9 @@ usage: ./proxy.py reverseproxy [-h] [--listen-port LISTEN_PORT]
                                [--listen-host LISTEN_HOST]
                                [--listen-unix LISTEN_UNIX]
                                [--listen-ssl LISTEN_SSL]
+                               [--listen-ca-cert LISTEN_CA_CERT]
+                               [--listen-cert LISTEN_CERT]
+                               [--listen-key LISTEN_KEY]
                                [--proxy-ssl PROXY_SSL]
                                [--proxy-module PROXY_MODULE]
 
@@ -68,6 +71,12 @@ optional arguments:
                         Listen unix socket for proxy
   --listen-ssl LISTEN_SSL
                         Listen with SSL
+  --listen-ca-cert LISTEN_CA_CERT
+                        PEM-CA-Cert for listening
+  --listen-cert LISTEN_CERT
+                        PEM-Cert for listening
+  --listen-key LISTEN_KEY
+                        PEM-Key for listening
   --proxy-ssl PROXY_SSL
                         Reverse proxy endpoints use SSL?
   --proxy-module PROXY_MODULE

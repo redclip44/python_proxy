@@ -304,6 +304,11 @@ reverseproxy.add_argument('--listen-port', type=int, help='Listen port for proxy
 reverseproxy.add_argument('--listen-host', type=str, help='Listen host for proxy only with --listen-port')
 reverseproxy.add_argument('--listen-unix', type=str, help='Listen unix socket for proxy')
 reverseproxy.add_argument('--listen-ssl', type=bool, help='Listen with SSL')
+reverseproxy.add_argument('--listen-ca-cert', type=str, help='PEM-CA-Cert for listening')
+reverseproxy.add_argument('--listen-cert', type=str, help='PEM-Cert for listening')
+reverseproxy.add_argument('--listen-key', type=str, help='PEM-Key for listening')
+
+
 reverseproxy.add_argument('--proxy-ssl', type=bool, help='Reverse proxy endpoints use SSL?')
 reverseproxy.add_argument('--proxy-module', type=str, help='Import .py file as a module containing a class named ProxyHandler to handle reverse proxy functionality')
 
