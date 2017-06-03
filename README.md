@@ -78,7 +78,7 @@ class ProxyHandler(object):
         @socket: accepted socket
         @return: void
 
-    ### Get Proxy Address
+    ### Get Proxy Address from a file/an API ...
     get_reverse_proxy(self)
         @return: tuple|string, boolean -> (tuple tcp address|string unix address, needs_ssl?)
 
