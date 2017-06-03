@@ -74,6 +74,7 @@ optional arguments:
 
    ```
 class ProxyHandler(object):
+
     ### Initialize first end forward
     initial_handshake(self, socket)
         @socket: accepted socket
