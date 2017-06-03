@@ -40,9 +40,9 @@ optional arguments:
   --proxy-ssl PROXY_SSL
                         Proxy endpoint uses SSL?
   ```
-* For reverse proxy:
-  ```
+ * For reverse proxy:
 
+  ```
 usage: ./proxy.py reverseproxy [-h] [--listen-port LISTEN_PORT]
                                [--listen-host LISTEN_HOST]
                                [--listen-unix LISTEN_UNIX]
