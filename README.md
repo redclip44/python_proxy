@@ -73,25 +73,26 @@ optional arguments:
  * Proxy handler must implement these methods:
 
    ```
- ### Initialize first end forward
- initial_handshake(self, socket)
-     @socket: accepted socket
-     @return: void
+class ProxyHandler(object):
+    ### Initialize first end forward
+    initial_handshake(self, socket)
+        @socket: accepted socket
+        @return: void
 
- ### Get Proxy Address
- get_reverse_proxy(self)
-     @return: tuple|string, boolean -> (tuple tcp address|string unix address, needs_ssl?)
+    ### Get Proxy Address
+    get_reverse_proxy(self)
+        @return: tuple|string, boolean -> (tuple tcp address|string unix address, needs_ssl?)
 
- ### Initialize second end forward
- init_reverse_proxy(self, socket)
-     @socket: created proxy socket
-     @return: boolean -> (False: init failed, True: init successfull)
+    ### Initialize second end forward
+    init_reverse_proxy(self, socket)
+        @socket: created proxy socket
+        @return: boolean -> (False: init failed, True: init successfull)
 
- ### Modify data while forwarding
- @staticmethod
- modify_data(data)
-     @data: data to forward
-     @return: string -> (modified data)
+    ### Modify data while forwarding
+    @staticmethod
+    modify_data(data)
+        @data: data to forward
+        @return: string -> (modified data)
    ```
 
  * Call ```./proxy.py reverseproxy --proxy-module=xxx.py --...```
