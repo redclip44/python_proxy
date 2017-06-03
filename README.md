@@ -76,6 +76,8 @@ optional arguments:
 
 ## Configure Reverse Proxy
 
+For reverse proxy functionality a module is required. This module contains callbacks, which are used to get proxy-address, modify data etc. Therefore this has to be self-written. To mention just a few circumstances, it's possbile to create Round-Robin-Proxies, insert HTTP X-Headers or request APIs to return the proxy-address.
+
  * Create a file with .py extension (xxx.py) containing a class named ProxyHandler.
  * Proxy handler must implement these methods:
 ```
