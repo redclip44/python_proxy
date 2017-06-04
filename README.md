@@ -1,9 +1,11 @@
 # Python Static and Reverse Proxy
 
 Proxy written in Python. Included are a Static and a Reverse Proxy.
+
 Static Proxy:
  * Proxy TCP- and Unix-sockets (Listen on both as well as proxy to both)
  * SSL encrypted sockets possible (via pyOpenSSL)
+
 Reverse Proxy:
  * Modular design to build Reverse Proxies for many occasions (HTTP-Proxies based on Host-Header, Random-/Round-Robin-Proxies/LoadBalancers...)
  * Also TCP- and Unix-sockets supported
